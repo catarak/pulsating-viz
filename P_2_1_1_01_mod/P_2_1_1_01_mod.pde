@@ -85,13 +85,23 @@ void draw() {
         //strokeWeight(mouseX/20);
         float weightX = (0.5*sin(thetaX)+ 0.5)* 20;
         strokeWeight(weightX);
+        pushMatrix();
+        translate(posX, posY);
+        rotate (thetaX);
         line(posX, posY, posX+width/tileCount, posY+height/tileCount);
+        popMatrix();
+
       }
       if (toggle == 1) {
         //strokeWeight(mouseY/20);
         float weightY = (0.5*sin(thetaY)+ 0.5)* 20;
         strokeWeight(weightY);
+        pushMatrix();
+        translate(posX, posY);
+        rotate (thetaX);
         line(posX, posY+width/tileCount, posX+height/tileCount, posY);
+        popMatrix();
+        
       }
     }
   }
